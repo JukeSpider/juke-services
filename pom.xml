@@ -5,10 +5,11 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>application-service</module>
-		<module>validator-service</module>
+		<module>customer-service</module>
+		<module>order-service</module>
 		<module>eureka-server</module>
-	</modules>
+    <module>client-service</module>
+  </modules>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -71,6 +72,11 @@
 			<groupId>org.mapstruct</groupId>
 			<artifactId>mapstruct</artifactId>
 			<version>1.4.2.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 	</dependencies>
 
