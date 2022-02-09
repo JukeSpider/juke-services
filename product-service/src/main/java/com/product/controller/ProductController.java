@@ -1,7 +1,7 @@
-package com.customer.controller;
+package com.product.controller;
 
-import com.customer.dto.CustomerDto;
-import com.customer.service.CustomerService;
+import com.product.dto.ProductDto;
+import com.product.service.ProductService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -16,23 +16,23 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/customer")
-public class CustomerController {
+@RequestMapping("/product")
+public class ProductController {
 
-  private final CustomerService service;
+  private final ProductService service;
 
   @GetMapping("/id{id}")
-  public ResponseEntity<CustomerDto> getById(@PathVariable Long id) {
+  public ResponseEntity<ProductDto> getById(@PathVariable Long id) {
     return ResponseEntity.status(HttpStatus.OK).body(service.findById(id));
   }
 
   @GetMapping("/all")
-  public ResponseEntity<List<CustomerDto>> findAll() {
+  public ResponseEntity<List<ProductDto>> findAll() {
     return ResponseEntity.status(HttpStatus.OK).body(service.findAll());
   }
 
   @PostMapping
-  public ResponseEntity<CustomerDto> save(@RequestBody CustomerDto entity) {
+  public ResponseEntity<ProductDto> save(@RequestBody ProductDto entity) {
     return ResponseEntity.status(HttpStatus.CREATED).body(service.save(entity));
   }
 
@@ -40,4 +40,5 @@ public class CustomerController {
   public void delete(@PathVariable Long id) {
     service.delete(id);
   }
+
 }

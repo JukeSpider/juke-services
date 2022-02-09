@@ -1,5 +1,6 @@
 package com.customer.entity;
 
+import com.customer.entity.base.BaseEntity;
 import com.customer.entity.enums.SexEnumEntity;
 import java.time.LocalDate;
 import javax.persistence.Column;

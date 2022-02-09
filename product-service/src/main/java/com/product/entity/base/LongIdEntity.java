@@ -1,4 +1,4 @@
-package com.customer.entity;
+package com.product.entity.base;
 
 import java.util.Objects;
 import javax.persistence.GeneratedValue;
@@ -20,12 +20,12 @@ public abstract class LongIdEntity {
 
   @Id
   @SequenceGenerator(
-      name = "customer_id_sequence",
-      sequenceName = "customer_id_sequence"
+      name = "product_id_sequence",
+      sequenceName = "product_id_sequence"
   )
   @GeneratedValue(
       strategy = GenerationType.SEQUENCE,
-      generator = "customer_id_sequence"
+      generator = "product_id_sequence"
   )
   private Long id;
 

@@ -1,4 +1,4 @@
-package com.customer.entity;
+package com.product.entity.base;
 
 import java.time.LocalDateTime;
 import javax.persistence.Column;

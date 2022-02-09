@@ -8,6 +8,7 @@
 		<module>customer-service</module>
 		<module>order-service</module>
 		<module>eureka-server</module>
+    <module>product-service</module>
   </modules>
 
 	<parent>

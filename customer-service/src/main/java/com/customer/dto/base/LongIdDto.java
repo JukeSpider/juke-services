@@ -1,4 +1,4 @@
-package com.customer.dto;
+package com.customer.dto.base;
 
 import java.util.Objects;
 import lombok.AllArgsConstructor;

@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface ICustomerService {
 
-  CustomerDto getById(Long id);
+  CustomerDto findById(Long id);
 
   List<CustomerDto> findAll();
 

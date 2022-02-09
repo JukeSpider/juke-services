@@ -16,7 +16,7 @@ public class CustomerService implements ICustomerService {
   private final ICustomerMapper mapper;
 
   @Override
-  public CustomerDto getById(Long id) {
+  public CustomerDto findById(Long id) {
     CustomerEntity entity = repository.findById(id).orElseThrow(IllegalArgumentException::new);
     return mapper.mapToDto(entity);
   }
