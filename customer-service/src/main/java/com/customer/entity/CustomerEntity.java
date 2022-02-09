@@ -1,7 +1,11 @@
 package com.customer.entity;
 
+import com.customer.entity.enums.SexEnumEntity;
+import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,11 +18,18 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table(name = "customer")
-public class CustomerEntity extends LongIdEntity {
+public class CustomerEntity extends BaseEntity {
 
-  @Column(name = "person_name")
-  private String person;
+  @Column(name = "name", nullable = false)
+  private String name;
 
-  @Column(name = "app_target")
-  private String target;
+  @Column(name = "birth_date", nullable = false)
+  private LocalDate birthDate;
+
+  @Enumerated(EnumType.STRING)
+  @Column(name = "sex", nullable = false)
+  private SexEnumEntity sex;
+
+  @Column(name = "phone")
+  private String phone;
 }

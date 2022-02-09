@@ -1,5 +1,7 @@
 package com.customer.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import java.time.LocalDate;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,9 +11,14 @@ import lombok.Setter;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CustomerDto extends LongIdDto {
+public class CustomerDto extends BaseDto {
 
-  private String person;
+  private String name;
 
-  private String target;
+  private String sex;
+
+  @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+  private LocalDate birthDate;
+
+  private String phone;
 }

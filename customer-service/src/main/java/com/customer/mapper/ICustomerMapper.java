@@ -1,4 +1,4 @@
-package com.customer.entity.mapper;
+package com.customer.mapper;
 
 import com.customer.dto.CustomerDto;
 import com.customer.entity.CustomerEntity;

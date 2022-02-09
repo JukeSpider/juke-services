@@ -1,4 +1,4 @@
-package com.customer.entity.mapper;
+package com.customer.mapper;
 
 import java.util.List;
 

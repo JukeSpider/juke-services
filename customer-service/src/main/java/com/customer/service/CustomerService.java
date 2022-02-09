@@ -2,7 +2,7 @@ package com.customer.service;
 
 import com.customer.dto.CustomerDto;
 import com.customer.entity.CustomerEntity;
-import com.customer.entity.mapper.ICustomerMapper;
+import com.customer.mapper.ICustomerMapper;
 import com.customer.repository.ICustomerRepository;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
