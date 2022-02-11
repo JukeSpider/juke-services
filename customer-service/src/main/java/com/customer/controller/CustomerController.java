@@ -17,12 +17,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/customer")
-public class CustomerController {
+public class CustomerController implements CustomerControllerApi {
 
   private final CustomerService service;
 
   @GetMapping("/id{id}")
-  public ResponseEntity<CustomerDto> getById(@PathVariable Long id) {
+  public ResponseEntity<CustomerDto> findById(@PathVariable Long id) {
     return ResponseEntity.status(HttpStatus.OK).body(service.findById(id));
   }
 

@@ -22,4 +22,6 @@ public class CustomerDto extends BaseDto {
   private LocalDate birthDate;
 
   private String phone;
+
+  private String email;
 }

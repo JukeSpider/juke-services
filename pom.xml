@@ -6,9 +6,9 @@
 
 	<modules>
 		<module>customer-service</module>
-		<module>order-service</module>
 		<module>eureka-server</module>
-    <module>product-service</module>
+		<module>validator-service</module>
+    <module>notification-client</module>
   </modules>
 
 	<parent>

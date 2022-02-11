@@ -1,12 +1,12 @@
 server:
-  port: 8081
+  port: 8082
 
 spring:
   application:
-    name: customer
+    name: validator
   datasource:
     password: password
-    url: jdbc:postgresql://localhost:5432/customer
+    url: jdbc:postgresql://localhost:5432/validator
     username: juke
   jpa:
     hibernate:
