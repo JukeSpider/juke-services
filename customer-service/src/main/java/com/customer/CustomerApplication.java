@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @SpringBootApplication
 @EnableJpaAuditing
 @EnableEurekaClient
-@EnableFeignClients(basePackages = "com")
+@EnableFeignClients(basePackages = {"com"})
 public class CustomerApplication {
 
   public static void main(String[] args) {

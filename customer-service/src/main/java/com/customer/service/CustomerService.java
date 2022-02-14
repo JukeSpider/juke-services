@@ -18,7 +18,6 @@ public class CustomerService implements ICustomerService {
 
   private final ICustomerRepository repository;
   private final ICustomerMapper mapper;
-
   private final IValidatorControllerApi validatorApi;
   private final INotificationControllerApi notificationApi;
 
@@ -40,7 +39,6 @@ public class CustomerService implements ICustomerService {
   public CustomerDto save(CustomerDto dto) {
     CustomerEntity entity = mapper.mapToEntity(dto);
     repository.save(entity);
-
     ValidatorDto validator = validatorApi.isValidate(entity.getId());
 
     notificationApi.sendNotification(
@@ -49,9 +47,6 @@ public class CustomerService implements ICustomerService {
             entity.getEmail(),
             String.format("Hi, %s! Welcome to Juke Services!",entity.getName())));
 
-    if (!validator.isValidate()) {
-      throw new IllegalStateException("Is not valid!");
-    }
 
     return dto;
   }
